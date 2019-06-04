@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: aes-encyption-service
+spec:
+  selector:
+    app: aes-encyption-service
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+  type: ClusterIP                                                       
+~                    

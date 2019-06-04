@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aes-encyption-service
+  labels:
+    app: aes-encyption-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aes-encyption-service
+  template:
+    metadata:
+      labels:
+        app: aes-encyption-service
+    spec:
+      containers:
+      - name: aes-encyption-service 
+        image: docker.io/alinawazmamdani/aes-encyption-service
+        ports:
+        - containerPort: 3000
